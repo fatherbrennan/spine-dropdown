@@ -1,0 +1,31 @@
+{
+  "name": "spine-dropdown",
+  "version": "1.0.0",
+  "description": "A barebone class to create dropdown functionality within projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatherbrennan/spine-dropdown.git"
+  },
+  "keywords": [
+    "electron",
+    "dropdown",
+    "light",
+    "spine",
+    "spine-dropdown",
+    "father",
+    "fatherbrennan",
+    "SpineDropdown",
+    "list",
+    "insertRule"
+  ],
+  "author": "fatherbrennan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatherbrennan/spine-dropdown/issues"
+  },
+  "homepage": "https://github.com/fatherbrennan/spine-dropdown#readme"
+}
