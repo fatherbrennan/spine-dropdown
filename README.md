@@ -75,7 +75,7 @@ main()
 ```
 ## Documentation
 ## Constructor
-#### Parameters
+> ### Parameters
 - stylesheet `(String) (required)`
 
     Linked stylesheet in html (typically `app.css` or `style.css`)
@@ -93,7 +93,7 @@ const sdd = new SpineDropdown('app')
 ## Methods
 ### **make**
 Create dropdown html with provided list
-#### Parameters
+> ### Parameters
 - list `(String) (required)`
 - target_id `(String) (required)`
 - options `(Object)`
@@ -104,13 +104,13 @@ Create dropdown html with provided list
   | replace   | Boolean   | Insert dropdown in-place of given element id                      | `appendChild()`   |
   | class     | String    | Class/classes string to add to dropdown parent div                | -                 |
   | classBody | String    | Class/classes string to add to dropdown list (body) div           | -                 |
-#### Return value
+> ### Return value
 - none
 ### **init**
 Attach functionality to all 'made' dropdowns with event listeners
-#### Parameters
+> ### Parameters
 - none
-#### Return value
+> ### Return value
 - Promise
     - Try: Success: `true`
     - Try: Catch: `null`
