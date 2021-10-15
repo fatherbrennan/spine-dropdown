@@ -95,7 +95,7 @@ const sdd = new SpineDropdown('app')
 #### `make`
 Create dropdown html with provided list
 - **Parameters**
-  - `list` (String) (required)
+  - `list` (Array) (required)
   - `target_id` (String) (required)
   - `options` (Object)
 
