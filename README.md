@@ -76,7 +76,7 @@ main()
 ## Documentation
 ### Constructor
 **Parameters**
-- stylesheet `(String) (required)`
+- `stylesheet` (String) (required)
 
     Linked stylesheet in html (typically `app.css` or `style.css`)
 
@@ -91,22 +91,22 @@ main()
 const sdd = new SpineDropdown('app')
 ```
 ### Methods
-#### make
+#### `make`
 Create dropdown html with provided list
 - **Parameters**
-  - list `(String) (required)`
-  - target_id `(String) (required)`
-  - options `(Object)`
+  - `list` (String) (required)
+  - `target_id` (String) (required)
+  - `options` (Object)
 
     | property  | type      | Action                                                            | Default           |
     | --------- | --------- | ----------------------------------------------------------------- | ----------------- |
-    | selected  | String    | Initial selected dropdown text (similate HMTL selected attribute) | First list item   |
-    | replace   | Boolean   | Insert dropdown in-place of given element id                      | `appendChild()`   |
-    | class     | String    | Class/classes string to add to dropdown parent div                | -                 |
-    | classBody | String    | Class/classes string to add to dropdown list (body) div           | -                 |
+    | `selected`  | String    | Initial selected dropdown text (similate HMTL selected attribute) | First list item   |
+    | `replace`   | Boolean   | Insert dropdown in-place of given element id                      | `appendChild()`   |
+    | `class`     | String    | Class/classes string to add to dropdown parent div                | -                 |
+    | `classBody` | String    | Class/classes string to add to dropdown list (body) div           | -                 |
 - **Return value**
   - none
-#### init
+#### `init`
 Attach functionality to all 'made' dropdowns with event listeners
 - **Parameters**
   - none
