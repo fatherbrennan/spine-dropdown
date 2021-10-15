@@ -3,6 +3,7 @@ A barebone class to create dropdown functionality within projects.
 ## Dependencies
 *Disclosure - Little to no testing has been performed and there are likely more dependencies*
 - Support for [`insertRule()`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule)
+
 **Tested environments (Successful)**
 - [Electron](https://www.electronjs.org/) v14.0.0
 ## Quickstart
