@@ -6,7 +6,7 @@ class SpineDropdown {
     constructor(stylesheet) {
         this.ss = document.querySelector(`link[href*=${stylesheet}]`)
         if (this.ss) {
-            let made = false
+            this.made = false
             this.ss = this.ss.sheet
             const rules = [
                 '.s-dd{position:relative}',
@@ -79,11 +79,11 @@ class SpineDropdown {
             d.append(dl)
             f.append(d)
             if (_rep) { el.replaceWith(f) } else { el.appendChild(f) }
-            made = true
+            this.made = true
         }
     }
     init() {
-        if (made) {
+        if (this.made) {
             const CSS_HEAD = this.CSS_HEAD
             const CSS_LIST = this.CSS_LIST
             const CSS_OPEN = this.CSS_OPEN
