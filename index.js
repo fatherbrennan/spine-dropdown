@@ -85,8 +85,7 @@ class SpineDropdown {
             }
             d.append(dl)
             f.append(d)
-            if (el) { if (_rep) { el.replaceWith(f) } else { el.appendChild(f) } }
-            return f
+            if (el) { if (_rep) { el.replaceWith(f) } else { el.appendChild(f) } } else { return f }
         }
     }
     init() {
