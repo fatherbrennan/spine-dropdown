@@ -20,17 +20,24 @@ function main() {
 
     // Lists
     const list1 = ['one', 'two', 'three', 'four', 'five']
-    const list2 = ['aaa','bbb','ccc','ddd','eee']
+    const list2 = ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+    const list3 = ['not', 'added', 'to', 'doc', 'yet']
 
     // Create instance of SpineDropdown with target stylesheet 'app.css'
     const sdd = new SpineDropdown('app')
 
-    // Make dropdowns
-    sdd.make(list2, 'dropdown', {
+    // Attach dropdown as the last child of target html element
+    sdd.make(list1, {
+        target: 'dropdown',
         class: 'black',
         classBody: 'white'
     })
-    sdd.make(list1, 'another-dropdown')
+
+    // Replace the target html element with dropdown
+    sdd.make(list2, { target: 'another-dropdown', replace: true })
+
+    // Store document fragment locally without adding to document
+    const dropdown = sdd.make(list3)
 
     // Initialise all 'made' dropdowns
     sdd.init()
@@ -96,22 +103,25 @@ const sdd = new SpineDropdown('app')
 Create dropdown html with provided list
 - **Parameters**
   - `list` (Array) (required)
-  - `target_id` (String) (required)
   - `options` (Object)
 
-    | property  | type      | Action                                                            | Default           |
-    | --------- | --------- | ----------------------------------------------------------------- | ----------------- |
-    | `selected`  | String    | Initial selected dropdown text (similate HMTL selected attribute) | First list item   |
-    | `replace`   | Boolean   | Insert dropdown in-place of given element id                      | `appendChild()`   |
-    | `class`     | String    | Class/classes string to add to dropdown parent div                | -                 |
-    | `classBody` | String    | Class/classes string to add to dropdown list (body) div           | -                 |
+    | property      | type      | Action                                                            | Default           |
+    | ------------- | --------- | ----------------------------------------------------------------- | ----------------- |
+    | `target`      | String    | HTML element index                                                | `null`            |
+    | `selected`    | String    | Initial selected dropdown text (similate HMTL selected attribute) | First list item   |
+    | `replace`     | Boolean   | Insert dropdown in-place of given element id                      | `appendChild()`   |
+    | `class`       | String    | Class/es string to add to dropdown parent div                     | `null`            |
+    | `classBody`   | String    | Class/es string to add to dropdown list (body) div                | `null`            |
 - **Return value**
-  - none
+  - Default
+    - none
+  - If `target` property is passed
+    - Document fragment
 #### `init`
 Attach functionality to all 'made' dropdowns with event listeners
 - **Parameters**
   - none
 - **Return value**
   - Promise
-    - Try: Success: `true`
-    - Try: Catch: `null`
+    - Success: `true`
+    - Error or Warning: `null`
