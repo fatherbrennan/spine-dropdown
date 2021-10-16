@@ -25,7 +25,9 @@ class SpineDropdown {
         let _clsB = ''
 
         function isValidInit() {
-            function required(param) { if (param) { return true } else { throw new Error(`${param} parameter must be defined`) } }
+            function required(param) {
+                if (param) { return true } else { throw new Error(`${param} parameter must be defined`) }
+            }
 
             function throwTypeError(e, t) { throw new TypeError(`${e} is not ${t}`) }
 
@@ -83,7 +85,8 @@ class SpineDropdown {
             }
             d.append(dl)
             f.append(d)
-            if (el) { if (_rep) { el.replaceWith(f) } else { el.appendChild(f) } } else { return f }
+            if (el) { if (_rep) { el.replaceWith(f) } else { el.appendChild(f) } }
+            return f
         }
     }
     init() {
