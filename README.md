@@ -34,7 +34,10 @@ function main() {
     })
 
     // Replace the target html element with dropdown
-    sdd.make(list2, { target: 'another-dropdown', replace: true })
+    sdd.make(list2, {
+        target: 'another-dropdown',
+        replace: true
+    })
 
     // Store document fragment locally without adding to document
     const dropdown = sdd.make(list3)
@@ -114,9 +117,9 @@ Create dropdown html with provided list
     | `classBody`   | String    | Class/es string to add to dropdown list (body) div                | `null`            |
 - **Return value**
   - Default
-    - none
+    - document fragment
   - If `target` property is passed
-    - Document fragment
+    - none
 #### `init`
 Attach functionality to all 'made' dropdowns with event listeners
 - **Parameters**
