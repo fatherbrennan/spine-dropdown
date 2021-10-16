@@ -6,15 +6,15 @@ class SpineDropdown {
     constructor(stylesheet) {
         this.ss = document.querySelector(`link[href*=${stylesheet}]`)
         if (this.ss) {
-            this.made = false
+            let made = false
             this.ss = this.ss.sheet
-            this.rules = [
+            const rules = [
                 '.s-dd{position:relative}',
                 '.s-dd::before{content: attr(data-selected)}',
                 '.s-dd-open{max-height:10rem;z-index:999999;overflow:auto}',
                 '.s-dd-list{max-height:0;overflow:hidden;position:absolute;user-select:none;width:100%}'
             ]
-            for (const r of this.rules) { this.ss.insertRule(r) }
+            for (const r of rules) { this.ss.insertRule(r) }
         } else { throw new ReferenceError(`${stylesheet} is not a referenced stylesheet in document`) }
     }
     make(list, target_id, options) {
@@ -79,11 +79,11 @@ class SpineDropdown {
             d.append(dl)
             f.append(d)
             if (_rep) { el.replaceWith(f) } else { el.appendChild(f) }
-            this.made = true
+            made = true
         }
     }
     init() {
-        if (this.made) {
+        if (made) {
             const CSS_HEAD = this.CSS_HEAD
             const CSS_LIST = this.CSS_LIST
             const CSS_OPEN = this.CSS_OPEN
